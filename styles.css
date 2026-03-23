@@ -1,0 +1,588 @@
+:root {
+    --chago-naranja: #F29100;
+    --chago-oscuro: #2B1B17;
+    --chago-crema: #FFD275;
+    --chago-rojo: #C42021;
+    --blanco: #ffffff;
+    --gris-fondo: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--gris-fondo);
+    color: var(--chago-oscuro);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background-color: var(--chago-oscuro);
+    padding: 10px 0;
+    border-bottom: 4px solid var(--chago-naranja);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px; 
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--chago-crema);
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('pizza-fondo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.5rem;
+    color: var(--chago-naranja);
+    margin-bottom: 10px;
+}
+
+.btn-main {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: var(--chago-naranja);
+    color: var(--chago-oscuro);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 50px 20px;
+}
+
+.menu-card {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.yellow-card {
+    background-color: var(--chago-crema);
+}
+
+.menu-item {
+    margin-bottom: 15px;
+}
+
+.menu-item strong {
+    display: block;
+    color: var(--chago-rojo);
+}
+
+/*==================================================
+   BARRA DE NAVEGACIÓN MINIMALISTA
+==================================================*/
+.navbar-minimal {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 100; /* Siempre por encima del fondo */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* El logo centrado como punto de simetría */
+.nav-logo {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid var(--chago-crema);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.nav-minimal-link {
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+.nav-minimal-link:hover {
+    color: var(--chago-naranja);
+    transform: translateY(-2px);
+}
+
+/*==================================================
+   ELEMENTOS DE DECORACIÓN Y PROFUNDIDAD
+==================================================*/
+.scroll-indicator {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--chago-crema);
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    opacity: 0.7;
+}
+
+/*==================================================
+   RESPONSIVIDAD (Media Queries)
+==================================================*/
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 20px;
+    }
+    .nav-logo {
+        width: 50px;
+    }
+    .hero-content {
+        padding: 0 15px;
+    }
+    .hero-description {
+        font-size: 1rem;
+        margin-top: 30px;
+        padding-left: 15px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+    .overlay-artesanal {
+        padding: 20px;
+        max-width: 90%;
+    }
+    .titulo-principal {
+        font-size: clamp(2rem, 8vw, 4rem);
+    }
+    .descripcion-artesanal {
+        font-size: 1rem;
+    }
+    .contenedor-texto {
+        padding-left: 15px;
+        max-width: 100%;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px 0;
+    }
+    .nav-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links {
+        gap: 10px;
+        order: 2;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+    .logo-img {
+        height: 40px;
+    }
+    .nav-extras {
+        order: 1;
+    }
+    .hero-main {
+        padding-top: 60px;
+    }
+    .overlay-artesanal {
+        padding: 15px;
+    }
+    .titulo-principal {
+        font-size: clamp(1.5rem, 10vw, 3rem);
+    }
+    .titulo-principal span {
+        font-size: 0.5em;
+        letter-spacing: 5px;
+    }
+    .label-ubicacion {
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+    }
+    .descripcion-artesanal {
+        font-size: 0.9rem;
+    }
+    .contenedor-texto {
+        margin-top: 20px;
+        padding-left: 10px;
+    }
+    .wa-float, .fb-float, .ig-float, .tt-float {
+        width: 50px;
+        height: 50px;
+        right: 10px;
+    }
+    .wa-float { bottom: 15px; }
+    .fb-float { bottom: 75px; }
+    .ig-float { bottom: 135px; }
+    .tt-float { bottom: 195px; }
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+        padding: 20px;
+    }
+}
+
+/* UNIFICACIÓN DE NAVBAR PARA TODO EL SITIO */
+.navbar, .navbar-minimal {
+    background-color: var(--chago-oscuro);
+    padding: 10px 0;
+    border-bottom: 4px solid var(--chago-naranja);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-container, .nav-flex {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Estilo para los enlaces de navegación */
+.nav-links, .nav-container {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links li a, .nav-minimal-link {
+    color: var(--blanco);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover, .nav-minimal-link:hover {
+    color: var(--chago-naranja);
+}
+
+/* Tamaño estándar del logo en la barra */
+.logo-img, .nav-logo {
+    height: 60px;
+    width: auto;
+    border-radius: 50%;
+}
+:root {
+    --chago-naranja: #F29100;
+    --chago-oscuro: #2B1B17;
+    --chago-crema: #FFD275;
+    --chago-rojo: #C42021;
+    --blanco: #ffffff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--chago-oscuro);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVBAR AJUSTADA PARA EL INICIO */
+.navbar {
+    background-color: rgba(43, 27, 23, 0.9); /* Tu oscuro con transparencia */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* HERO CON TU IMAGEN DE FONDO (PATRÓN) */
+.hero-main {
+    min-height: 100vh;
+    /* Usamos la imagen del patrón de pizzas que subiste */
+    background-image: linear-gradient(rgba(43, 27, 23, 0.8), rgba(43, 27, 23, 0.9)), url('Logopizzeria.jpeg');
+    background-size: 400px; /* Ajusta el tamaño del patrón */
+    background-repeat: repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px; /* Espacio para la navbar fija */
+}
+
+.overlay-artesanal {
+    text-align: center;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(43, 27, 23, 0.5); /* Fondo sutil para legibilidad */
+    border-radius: 20px;
+}
+
+.label-ubicacion {
+    color: var(--chago-naranja);
+    letter-spacing: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.titulo-principal {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    color: var(--blanco);
+    font-style: italic;
+    margin: 0;
+}
+
+.titulo-principal span {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-size: 0.4em;
+    color: var(--chago-crema);
+    letter-spacing: 10px;
+    margin-top: 15px;
+}
+
+.contenedor-texto {
+    margin-top: 30px;
+    border-left: 4px solid var(--chago-rojo);
+    padding-left: 20px;
+    text-align: left;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.descripcion-artesanal {
+    color: var(--blanco);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Redes Sociales Flotantes */
+.wa-float, .fb-float, .ig-float, .tt-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    transition: transform 0.3s;
+}
+
+.wa-float:hover, .fb-float:hover, .ig-float:hover, .tt-float:hover {
+    transform: scale(1.1);
+}
+
+.wa-float {
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+}
+
+.fb-float {
+    bottom: 90px;
+    right: 20px;
+    background-color: #1877F2;
+}
+
+.ig-float {
+    bottom: 160px;
+    right: 20px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.tt-float {
+    bottom: 230px;
+    right: 20px;
+    background-color: #000000;
+}
+/* --- ESTILOS DEL FOOTER --- */
+.chago-footer {
+    background-color: var(--chago-oscuro);
+    color: var(--blanco);
+    padding: 30px 0;
+    border-top: 4px solid var(--chago-naranja);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-social-links a {
+    color: var(--chago-crema);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* --- POSICIONES DE LAS 4 REDES FLOTANTES --- */
+.wa-float, .fb-float, .ig-float, .tt-float {
+    position: fixed;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Ajuste de alturas para que queden una sobre otra */
+.wa-float { bottom: 20px; background-color: #25d366; }
+.fb-float { bottom: 90px; background-color: #1877f2; }
+.ig-float { bottom: 160px; background-color: #e4405f; }
+.tt-float { bottom: 230px; background-color: #000000; }
+
+/* --- ESTILOS DE LA VENTANA MODAL --- */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 10001; /* Por encima de todo */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Fondo oscuro transparente */
+}
+
+.modal-content {
+    background-color: var(--blanco);
+    margin: 10% auto;
+    padding: 25px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 15px;
+    border-top: 8px solid var(--chago-naranja);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--chago-oscuro);
+}
+
+.btn-confirmar {
+    background-color: var(--chago-rojo);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-carrito button {
+    background: var(--chago-rojo);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

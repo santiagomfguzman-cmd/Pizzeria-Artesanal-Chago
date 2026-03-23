@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizzas - Chago Pizzería</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="estilospizzas.css">
+</head>
+<body>
+    <header class="navbar-minimal">
+        <div class="nav-container">
+            <img src="logo.jpeg" alt="Chago Logo" class="nav-logo">
+            <a href="index.html" class="nav-minimal-link">INICIO</a>
+            <a href="menu.html" class="nav-minimal-link">MENÚ</a>
+            <a href="promos.html" class="nav-minimal-link">PROMOS</a>
+            <a href="ubicacion.html" class="nav-minimal-link">UBICACIÓN</a>
+            <a href="#" class="cart-link">
+                <img src="carritodecompras.png" alt="Carrito" width="35">
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="grid-pizzas-main">
+            <div class="pizzas-header-bar">
+                <span>NUESTRAS PIZZAS</span>
+                <span style="font-size: 0.7rem;">SABOR ARTESANAL</span>
+            </div>
+
+            <div class="pizzas-grid">
+                <article class="pizza-item-card">
+                    <div class="pizza-image-container"><img src="pizzacarnesfrias.jpg"></div>
+                    <select class="pizza-tamano-select"><option>Individual - $99</option><option>Mediana - $189</option><option>Grande - $249</option><option>Familiar - $450</option></select>
+                    <button class="btn-ordenar-ahora">ORDENAR AHORA</button>
+                    <h3>CARNES FRÍAS</h3>
+                </article>
+
+                <article class="pizza-item-card">
+                    <div class="pizza-image-container"><img src="pizzadechampiñones.jpg"></div>
+                    <select class="pizza-tamano-select"><option>Individual - $85</option><option>Mediana - $159</option><option>Grande - $210</option><option>Familiar - $380</option></select>
+                    <button class="btn-ordenar-ahora">ORDENAR AHORA</button>
+                    <h3>CHAMPIÑONES</h3>
+                </article>
+
+                <article class="pizza-item-card">
+                    <div class="pizza-image-container"><img src="pizzadequeso.jpg"></div>
+                    <select class="pizza-tamano-select"><option>Individual - $80</option><option>Mediana - $149</option><option>Grande - $199</option><option>Familiar - $360</option></select>
+                    <button class="btn-ordenar-ahora">ORDENAR AHORA</button>
+                    <h3>ESPECIAL DE QUESO</h3>
+                </article>
+
+                <article class="pizza-item-card">
+                    <div class="pizza-image-container"><img src="pizzahawaiana.jpg"></div>
+                    <select class="pizza-tamano-select"><option>Individual - $89</option><option>Mediana - $169</option><option>Grande - $230</option><option>Familiar - $410</option></select>
+                    <button class="btn-ordenar-ahora">ORDENAR AHORA</button>
+                    <h3>HAWAIANA</h3>
+                </article>
+
+                <article class="pizza-item-card">
+                    <div class="pizza-image-container"><img src="pizzamexicana.jpg"></div>
+                    <select class="pizza-tamano-select"><option>Individual - $95</option><option>Mediana - $179</option><option>Grande - $240</option><option>Familiar - $430</option></select>
+                    <button class="btn-ordenar-ahora">ORDENAR AHORA</button>
+                    <h3>MEXICANA</h3>
+                </article>
+
+                <article class="pizza-item-card">
+                    <div class="pizza-image-container"><img src="pizzapastor.jpg"></div>
+                    <select class="pizza-tamano-select"><option>Individual - $99</option><option>Mediana - $185</option><option>Grande - $250</option><option>Familiar - $450</option></select>
+                    <button class="btn-ordenar-ahora">ORDENAR AHORA</button>
+                    <h3>AL PASTOR</h3>
+                </article>
+
+                <article class="pizza-item-card">
+                    <div class="pizza-image-container"><img src="pizzapeperoni.jpg"></div>
+                    <select class="pizza-tamano-select"><option>Individual - $89</option><option>Mediana - $165</option><option>Grande - $220</option><option>Familiar - $399</option></select>
+                    <button class="btn-ordenar-ahora">ORDENAR AHORA</button>
+                    <h3>PEPPERONI</h3>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer class="chago-footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <img src="logo.jpeg" alt="Logo" class="logo-img">
+                <p>Sabor artesanal a la leña.</p>
+            </div>
+            <div class="footer-section">
+                <h4>SÍGUENOS</h4>
+                <div class="footer-social-links">
+                    <a href="https://wa.me/+527451176090" target="_blank">WhatsApp</a>
+                    <a href="https://www.facebook.com/share/1GHT45mneg/" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/pizzas_chago" target="_blank">Instagram</a>
+                    <a href="https://www.tiktok.com/@pizzas.chago" target="_blank">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal-carrito" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Tu Pedido en Chago</h2>
+            <hr>
+            <div id="lista-carrito">
+                <p>El carrito está vacío 🍕</p>
+            </div>
+            <div class="total-carrito" style="margin-top: 20px; border-top: 1px solid #ddd; padding-top: 10px;">
+                <strong>Total: $<span id="precio-total">0</span></strong>
+            </div>
+            <button id="btn-comprar" class="btn-confirmar">Confirmar Pedido</button>
+        </div>
+    </div>
+
+    <script src="scripcarrito.js"></script>
+</body>
+</html>

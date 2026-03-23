@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO - Chago Pizzería</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;600&family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-flex">
+            <img src="logo.jpeg" alt="Chago Logo" class="logo-img">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="menu.html">MENÚ</a></li>
+                    <li><a href="promos.html">PROMOS</a></li>
+                    <li><a href="ubicacion.html">UBICACIÓN</a></li>
+                </ul>
+            </nav>
+            <div class="nav-extras">
+                <a href="#" class="cart-link">
+                    <img src="carritodecompras.png" alt="Carrito" width="35">
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="hero-main">
+        <div class="overlay-artesanal">
+            <span class="label-ubicacion">DESDE EL CORAZÓN DE GUERRERO</span>
+
+            <h1 class="titulo-principal">Chago Pizzería <span>TRADICIÓN Y FUEGO</span></h1>
+
+            <div class="contenedor-texto">
+                <p class="descripcion-artesanal">
+                    Donde el tiempo se detiene y la paciencia crea sabor. Masas maduradas, ingredientes locales y el calor exacto de la leña para la auténtica experiencia artesanal.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer class="chago-footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <img src="logo.jpeg" alt="Logo" class="logo-img">
+                <p>Sabor artesanal a la leña.</p>
+            </div>
+            <div class="footer-section">
+                <h4>SÍGUENOS</h4>
+                <div class="footer-social-links">
+                    <a href="https://wa.me/+527451176090" target="_blank">WhatsApp</a>
+                    <a href="https://www.facebook.com/share/1GHT45mneg/" target="_blank">Facebook</a>
+                    <a href="https://www.instagram.com/pizzas_chago" target="_blank">Instagram</a>
+                    <a href="https://www.tiktok.com/@pizzas.chago?_r=1&_t=ZS-94YQfEW3mBr" target="_blank">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal-carrito" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Tu Pedido en Chago</h2>
+            <hr>
+            <div id="lista-carrito">
+                <p>El carrito está vacío 🍕</p>
+            </div>
+            <div class="total-carrito" style="margin-top: 20px; border-top: 1px solid #ddd; padding-top: 10px;">
+                <strong>Total: $<span id="precio-total">0</span></strong>
+            </div>
+            <button id="btn-comprar" class="btn-confirmar">Confirmar Pedido</button>
+        </div>
+    </div>
+
+    <script src="scripcarrito.js"></script>
+</body>
+</html>

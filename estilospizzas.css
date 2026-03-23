@@ -1,0 +1,87 @@
+:root {
+    --chago-naranja: #F29100;
+    --chago-oscuro: #2B1B17;
+    --chago-crema: #FFD275;
+    --chago-rojo: #C42021;
+    --blanco: #ffffff;
+}
+
+.grid-pizzas-main {
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: var(--blanco);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pizzas-header-bar {
+    background-color: var(--chago-oscuro);
+    color: var(--chago-crema);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--chago-naranja);
+}
+
+.pizzas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 25px;
+}
+
+/* --- ESTO ARREGLA TUS IMÁGENES --- */
+.pizza-image-container {
+    width: 100%;
+    height: 180px; /* Altura fija para TODAS */
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background-color: #eee; /* Fondo por si la imagen tarda en cargar */
+}
+
+.pizza-image-container img {
+    width: 100%;
+    height: 100%;
+    /* La propiedad mágica: rellena el espacio sin deformar */
+    object-fit: cover; 
+    object-position: center;
+}
+/* ---------------------------------- */
+
+.pizza-tamano-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--chago-naranja);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn-ordenar-ahora {
+    background-color: var(--chago-rojo);
+    color: var(--blanco);
+    border: none;
+    padding: 12px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.pizza-item-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 10px;
+    color: var(--chago-oscuro);
+}
+
+@media (max-width: 900px) { .pizzas-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .pizzas-grid { grid-template-columns: 1fr; } }

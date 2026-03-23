@@ -1,0 +1,50 @@
+/* --- estilosentienda.css --- */
+@import url("estilosubicacion.css");
+.select-chago {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 25px;
+    border: 2px solid var(--chago-naranja);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: var(--chago-oscuro);
+    background-color: white;
+    cursor: pointer;
+}
+
+.info-tienda-detalle {
+    background-color: #fdfdfd;
+    border-left: 5px solid var(--chago-rojo);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 0 8px 8px 0;
+}
+
+.info-tienda-detalle p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.info-tienda-detalle hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+.cart-count {
+    background: var(--chago-naranja);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 0.8rem;
+    vertical-align: top;
+    margin-left: -10px;
+}
+
+/* Ajuste para que el mapa se vea bien en esta sección */
+.mapa-container iframe {
+    filter: grayscale(0.2) contrast(1.1);
+}

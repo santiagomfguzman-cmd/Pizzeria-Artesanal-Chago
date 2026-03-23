@@ -1,0 +1,109 @@
+:root {
+    --chago-naranja: #F29100;
+    --chago-oscuro: #2B1B17;
+    --chago-crema: #FFD275;
+    --chago-rojo: #C42021;
+    --blanco: #ffffff;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.menu-title {
+    text-align: center;
+    color: var(--chago-rojo);
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.category-card {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--blanco);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-image {
+    width: 200px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-info {
+    flex: 1;
+    padding: 20px;
+    /* Respetando tu degradado original */
+    background: linear-gradient(135deg, var(--chago-naranja) 0%, var(--chago-rojo) 100%);
+    color: var(--blanco);
+}
+
+.category-info h3 {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+}
+
+.category-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.95;
+}
+
+/* Nueva clase para resaltar el precio con tus colores */
+.price-tag {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--chago-oscuro);
+    color: var(--chago-crema);
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+}
+
+.btn-ordenar-ahora {
+    background-color: var(--chago-rojo);
+    color: var(--blanco);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn-ordenar-ahora:hover {
+    background-color: #b82022;
+}
+
+@media (max-width: 600px) {
+    .category-card {
+        flex-direction: column;
+    }
+    .category-image {
+        width: 100%;
+        height: 200px;
+    }
+}
